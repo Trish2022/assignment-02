@@ -123,7 +123,7 @@ switch (directn) {
     }
     //THIS IS NOT WORKING RIGHT IF RATING CODE IS ON THE SWITCHES DONT PRINT TO THE BROWSER
 
-    // alert ("The game is over.")
+    alert ("The game is over.")
     var rating = Number( prompt("Please rate this game from 1 - 10."));
     while(rating < 1 || rating > 10) {
     rating = Number( prompt("Please enter a number from 1 - 10."));
