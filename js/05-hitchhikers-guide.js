@@ -14,43 +14,44 @@ the correct option.
 
 
 
-var x = prompt("Are you ready to play the game?");
+var x = prompt("Are you ready to play the game, yes or no?");
   if (x ==='yes') {      
     alert("You said yes, so let's go!");  
-  } else if (x !== "yes") {
-    alert("You canceled. Come back another time.");
-}
+//   } else {
+//     alert("You canceled. Come back another time.");
+// }
 
 alert("You are in a dark, dingy, and humid cave searching for the lost treasure of Captain Chingadera. You are disoriented, lost, hungry and extremely thirsty. You see a speck of light in the distance ahead of you, something shimmering to your right, and the sound of running water to your left. Your back is against the wall.");
 
 //Using a switch statement, evaluate the direction that the user selected.
-var directn= prompt("Which direction would you like to head (please enter forward, left, or right).");
-switch (directn) {
-    case "forward":
-        document.write("You walk 100 yards and safely make your way out of the cave.");
-        break;
-    case "left":
-        document.write("Your thirst has gotten the better of you. You trip on a rock, hit your head, and fall into a pool of water and drown!");
-        break;
-    case "right":
-        document.write("YYou found the gold! You walk into a small room and see thousands of gold coins, jewels, chalices, and more. You jump into the pile of gold in celebration and immediately a hidden door slams down and traps you in the room forever!.");
-        break;
-    default: 
-        document.write("The ghost of Captain Chingadera has condemned you to eternal damnation and you shall now burn in the hot excoriation for lifeless lowlifes for not choosing the correct option.")
-    }
-    //THIS IS NOT WORKING RIGHT IF RATING CODE IS ON THE SWITCHES DONT PRINT TO THE BROWSER
-
-    // alert ("The game is over.")
-    var rating = Number( prompt("Please rate this game from 1 - 10."));
-    while(rating < 1 || rating > 10) {
-    rating = Number( prompt("Please enter a number from 1 - 10."));
+    var directn= prompt("Which direction would you like to head (please enter forward, left, or right)."); {
+    switch (directn) {
+        case "forward":
+            alert("You walk 100 yards and safely make your way out of the cave.");
+            break;
+        case "left":
+            alert("Your thirst has gotten the better of you. You trip on a rock, hit your head, and fall into a pool of water and drown!");
+            break;
+        case "right":
+            alert("You found the gold! You walk into a small room and see thousands of gold coins, jewels, chalices, and more. You jump into the pile of gold in celebration and immediately a hidden door slams down and traps you in the room forever!");
+            break;
+        default: 
+           alert("The ghost of Captain Chingadera has condemned you to eternal damnation and you shall now burn in the hot excoriation for lifeless lowlifes for not choosing the correct option.")
+        }
     }
 
-    if (rating >= 6)
-    {
-        console.log("Thank you! Play again now, or come back soon!");
-    }
-    else
-    {
-        console.log("Sorry you weren't happy with the game, I'll keep working on it.");
+    let rating = prompt("The game is over. Please rate this game from 1 - 10, with 10 being the highest rating.")
+    // var rating = Number( prompt("Enter a number from 1 - 10."));
+    // while(rating < 1 || rating > 10) {
+    // rating = Number( prompt("Please enter a number from 1 - 10."));
+    // }
+
+        if (rating >= 6) {
+            document.write("Thank you for playing! Play again now, or come back soon!");
+        }
+        else if (rating <= 5){
+            document.write("Sorry you weren't happy with the game, I'll keep working on it.");
+        } else {
+            prompt("You canceled. Come back another time.");
+        }
     }
